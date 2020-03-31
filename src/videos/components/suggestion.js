@@ -18,4 +18,4 @@ function Suggestion (props) {
     )
 }
 
-export default Suggestion
+export default Suggestion;

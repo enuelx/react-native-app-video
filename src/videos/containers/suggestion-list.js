@@ -6,7 +6,7 @@ import {
 
 import Layout from "../components/suggestion-list-layout";
 import Empty from "../components/empty";
-import Separator from "../components/verticalSeparator";
+import Separator from "../components/vertical-separator";
 
 class SuggestionList extends Component {
     renderEmpty = () => <Empty text="No hay sugerencias"/>
