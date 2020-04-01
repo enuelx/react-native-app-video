@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import {
     FlatList,
-    Text,
-    ScrollView
+    Text
 } from 'react-native';
-
-import Layout from "../components/suggestion-list-layout";
-import Empty from "../components/empty";
-import Separator from "../components/vertical-separator";
+import Layout from '../components/suggestion-list-layout';
+import Empty from '../components/empty';
+import Separator from '../components/vertical-separator';
 import Suggestion from '../components/suggestion';
 
 class SuggestionList extends Component {
     keyExtractor = item => item.id.toString()
-    renderEmpty = () => <Empty text="No hay sugerencias" />
+    renderEmtpy = () => <Empty text="No hay sugerencias :(" />
     itemSeparator = () => <Separator />
     renderItem = ({ item }) => {
         return (
@@ -20,12 +18,15 @@ class SuggestionList extends Component {
         )
     }
     render() {
+
         return (
-            <Layout title="Recomendado para ti" >
+            <Layout
+                title="Recomendado para ti"
+            >
                 <FlatList
                     keyExtractor={this.keyExtractor}
                     data={this.props.list}
-                    ListEmptyComponent={this.renderEmpty}
+                    ListEmptyComponent={this.renderEmtpy}
                     ItemSeparatorComponent={this.itemSeparator}
                     renderItem={this.renderItem}
                 />
@@ -34,4 +35,4 @@ class SuggestionList extends Component {
     }
 }
 
-export default SuggestionList;
+export default SuggestionList

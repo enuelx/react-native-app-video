@@ -1,4 +1,4 @@
-const BASE_API = 'https://yst.am/api/v2/';
+const BASE_API = 'https://yts.am/api/v2/';
 
 class Api {
     async getSuggestion(id) {
